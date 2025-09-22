@@ -19,6 +19,7 @@
 
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include "controller_interface/helpers.hpp"
 #include "hardware_interface/loaned_command_interface.hpp"

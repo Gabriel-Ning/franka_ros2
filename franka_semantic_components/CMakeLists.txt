@@ -21,6 +21,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
     sensor_msgs
     hardware_interface
     rclcpp_lifecycle
+    controller_interface
     urdf)
 
 # find dependencies
@@ -46,7 +47,7 @@ target_include_directories(
 
 target_link_libraries(franka_semantic_components Franka::Franka Eigen3::Eigen)
 
-ament_target_dependencies(franka_semantic_components Franka sensor_msgs
+ament_target_dependencies(franka_semantic_components Franka sensor_msgs 
                           geometry_msgs ${THIS_PACKAGE_INCLUDE_DEPENDS})
 
 install(TARGETS franka_semantic_components DESTINATION lib)
